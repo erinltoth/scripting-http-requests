@@ -12,8 +12,7 @@ https.get(requestOptions, function(response) {
   response.setEncoding('utf8');
 
   response.on('data', function(chunk) {
-    body += (chunk + '\n');
-    console.log(body);
+    console.log(chunk + '\n');
   });
 });
 
