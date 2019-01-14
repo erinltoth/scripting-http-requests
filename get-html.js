@@ -2,12 +2,12 @@ var https = require('https');
 
 function getHTML (options, callback) {
 
-var requestOptions = {
-    host: options.host,
-    path: options.path
-  };
+// var requestOptions = {
+    // host: options.host,
+    // path: options.path
+  // };
   var html = '';
-  https.get(requestOptions, function(response) {
+  https.get(options, function(response) {
     response.setEncoding('utf8');
     response.on('data', function(chunk) {
       html += chunk;
